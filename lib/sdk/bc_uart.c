@@ -177,7 +177,7 @@ void bc_uart_init(bc_uart_channel_t channel, bc_uart_baudrate_t baudrate, bc_uar
             GPIOA->PUPDR |= GPIO_PUPDR_PUPD10_0;
 
             // Select AF4 alternate function for TXD2 and RXD2 pins
-            GPIOA->AFR[1] |= 4 << GPIO_AFRH_AFSEL10_Pos | 4 << GPIO_AFRH_AFSEL10_Pos;
+            GPIOA->AFR[1] |= 4 << GPIO_AFRH_AFSEL10_Pos | 4 << GPIO_AFRH_AFSEL9_Pos;
 
             // Configure TXD2 and RXD2 pins as alternate function
             GPIOA->MODER &= ~(1 << GPIO_MODER_MODE10_Pos | 1 << GPIO_MODER_MODE9_Pos);
